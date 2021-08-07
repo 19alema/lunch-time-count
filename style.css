@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red */
+} 
+
+:root {
+     --Grayish-blue: hsl(237, 18%, 59%);
+     --Soft-red: hsl(345, 95%, 68%);
+
+     /* Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    --Dark-desaturated-blue: hsl(236, 21%, 26%);
+    --Very-dark-blue: hsl(235, 16%, 14%);
+    --Very-dark-blue: hsl(234, 17%, 12%);
+
+    --bg-color: linear-gradient( bottom, var(--Grayish-blue), var(--Soft-red))
+}
+
+body {
+ background: url(images/bg-stars.svg), url(images/pattern-hills.svg) bottom no-repeat;
+ bottom: 0;
+ background-position: bottom;
+ width: 100%;
+ background-size: 100% 8rem;
+ background-color: var(--Very-dark-blue);
+ color: #fff;
+ height: 100vh;
+ font-family: Montserrat;
+}
+/* BODY */
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    
+    height: 100vh;
+    text-align: center;
+    width: 100%;
+}
+
+.title {
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    color: var(--White)
+}
+
+.container {
+    position: absolute;
+    bottom: 50%;
+     left: 0;
+     right: 0;
+     max-width: 900px;
+     margin: 0 auto;
+    padding: 0 40px;
+     
+}
+
+.timer {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5rem;
+}
+
+
+.time {
+    color: var(--Soft-red);
+}
+
+.time h4 {
+    font-size: 2.3rem;
+    background: linear-gradient(var(--Very-dark-blue), var(--Dark-desaturated-blue));
+    padding: 1.3rem;
+    border-radius: 10px;
+}
+
+ p {
+     padding-top: 1.5rem;
+     text-transform: uppercase;
+     font-weight: 700;
+     color: var(--Dark-desaturated-blue)
+ }
+
+footer {
+    position:absolute;
+    bottom: 2rem;
+    left: 50%;
+    right: 50%;
+}
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.single-footer {
+    margin: 0 1rem;
+}
+
+
+@media(max-width: 350px) {
+    .title {
+        font-size: 15px;
+        letter-spacing: unset;
+    }
+
+    p {
+       font-size: 8px;
+    }
+
+    .time h4 {
+        padding: 10px;
+        font-size: 15px;
+    }
+    .timer {
+        padding-top: 1rem;
+    }
+
+    .single-timer {
+        margin: 0 .5rem;
+    }
+}
+
