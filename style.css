@@ -69,6 +69,28 @@ main {
 
 .time {
     color: var(--Soft-red);
+    position: relative;
+}
+
+.time::after,
+.time::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--Very-dark-blue);
+    top: 50%;
+}
+
+.time::before {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.time::after {
+    right: 0;
+    transform: translate(50%, -50%);
 }
 
 .time h4 {
